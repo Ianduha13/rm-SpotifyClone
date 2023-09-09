@@ -12,7 +12,7 @@ const TrackListItem = ({track} : TrackListItemProps) => {
       <Image
       source={{uri: track.album.images[0]?.url}} style={styles.image}
       />
-      <View style={styles.headerContainer}>
+      <View>
         <Text style={styles.title}>{track.name}</Text>
         <Text style={styles.subtitle}>{track.artists[0]?.name}</Text>
       </View>
@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   title:{
-    color: 'black',
-    ontWeight: '500',
+    color: 'white',
+    fontWeight: '500',
     fontSize: 16,
   }
 ,
