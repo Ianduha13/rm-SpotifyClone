@@ -4,6 +4,7 @@ import TrackListItem from '../../components/TrackListItem';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FontAwesome } from '@expo/vector-icons';
 import { useState } from 'react';
+import Player from '../../components/Player';
 
 export default function HomeScreen() {
   const [searchText, setSearchText] = useState('');
@@ -19,6 +20,7 @@ export default function HomeScreen() {
       renderItem={({item}) => <TrackListItem track={item} />}
       showsVerticalScrollIndicator={false}
       />
+      <Player/>
     </SafeAreaView>
   );
 }

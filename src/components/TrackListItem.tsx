@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   title:{
-    color: 'white',
+    color: '#fff',
     fontWeight: '500',
     fontSize: 16,
   }
