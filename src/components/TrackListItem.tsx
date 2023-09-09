@@ -1,14 +1,17 @@
-import { StyleSheet,Image, Text, View } from 'react-native'
+import { StyleSheet,Pressable, Image, Text, View } from 'react-native'
 import React from 'react'
 import { Track } from '../types'
+import { usePlayerContext } from '../providers/PlayerProvider'
 
 type TrackListItemProps = {
   track: Track
 }
 
 const TrackListItem = ({track} : TrackListItemProps) => {
+  const { setTrack } = usePlayerContext()
+
   return (
-    <View style={styles.container}>
+    <Pressable onPress={() => setTrack(track)} style={styles.container}>
       <Image
       source={{uri: track.album.images[0]?.url}} style={styles.image}
       />
@@ -16,7 +19,7 @@ const TrackListItem = ({track} : TrackListItemProps) => {
         <Text style={styles.title}>{track.name}</Text>
         <Text style={styles.subtitle}>{track.artists[0]?.name}</Text>
       </View>
-    </View>
+    </Pressable>
   )
 }
 

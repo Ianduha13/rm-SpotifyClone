@@ -9,7 +9,7 @@ import Player from '../../components/Player';
 export default function HomeScreen() {
   const [searchText, setSearchText] = useState('');
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <FontAwesome name="search" size={16} color="gray" />
         <TextInput value={searchText} onChangeText={setSearchText} placeholder="What do you want to listen to?" style={styles.input} />
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   container:{
-
+    backgroundColor: '#090909',
   },
   input:{
     flex:1,
